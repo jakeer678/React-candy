@@ -1,0 +1,35 @@
+.cart-item {
+    list-style: none;
+    border-bottom: 1px solid black;
+  
+  }
+  
+    .image_first  {
+      width: 4rem;
+      height:2rem;
+  
+    }
+    .cart-item button {
+      font: inherit;
+      font-weight: bold;
+      font-size: 1.25rem;
+      color: #068a83;
+      border: 1px solid #8a2b06;
+      width: 3rem;
+      text-align: center;
+      border-radius: 6px;
+      background-color: transparent;
+      cursor: pointer;
+      margin-left: 1rem;
+      margin: 0.25rem;
+    }
+    .item_price {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .cart-item button:hover,
+    .cart-item button:active {
+      background-color: #8a2b06;
+      color: rgb(172, 6, 6);
+    }

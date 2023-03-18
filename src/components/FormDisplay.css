@@ -1,0 +1,24 @@
+.button {
+    font: inherit;
+    cursor: pointer;
+    padding: 0.7rem 2rem;
+    border: 1px solid #40005d;
+    background-color:#1fe018 ;
+    color: white;
+    font-weight: 700;
+    border-radius: 12px;
+    margin-left: 0.75rem;
+}
+.itemList_1 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+}
+.itemlist {
+    background-color: blueviolet;
+    width: 10rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2rem;
+    text-align: center;
+}
