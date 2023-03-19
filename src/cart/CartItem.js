@@ -1,8 +1,6 @@
 import "./CartItem.css";
 
 const CartItem = (props) => {
-  
-
   return (
     <li className="cart-item">
       <div>
@@ -18,7 +16,7 @@ const CartItem = (props) => {
           <div className="actions">
             <button onClick={props.removeItem}>−</button>
             <button onClick={props.setList}>+</button>
-          </div> 
+          </div>
         </div>
       </div>
     </li>

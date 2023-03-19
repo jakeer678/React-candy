@@ -11,7 +11,7 @@ const Form = () => {
     const qauntity = document.querySelectorAll(
       "#candyName,#candyDescription,#candyPrice"
     ).value;
-    
+
     const inputValue = {
       candyName: formData.candyName,
       candyDescription: formData.candyDescription,

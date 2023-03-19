@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { contextItem } from "./Contextstore";
 
-const initialValue ={
-  id:Math.random(),
-  candyName:'',
-  candyDescription: '',
-  candyPrice: 10
-}
+const initialValue = {
+  id: Math.random(),
+  candyName: "",
+  candyDescription: "",
+  candyPrice: 10,
+};
 
 const ContextProvider = (props) => {
   const [showCart, setShowCart] = useState(false);
@@ -17,8 +17,8 @@ const ContextProvider = (props) => {
   };
 
   const addItems = (item) => {
-    setList([...list,item])
-  }
+    setList([...list, item]);
+  };
 
   const removeItem = (Id) => {
     const filterItems = list.filter((item) => item.id !== Id);

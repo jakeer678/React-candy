@@ -5,13 +5,14 @@ import CartItem from "./CartItem";
 import "./Cart.css";
 
 const Cart = () => {
-  const { showCart,list, setShowCart,addItems,removeItem } = useContext(contextItem);
+  const { showCart, list, setShowCart, addItems, removeItem } =
+    useContext(contextItem);
 
-console.log(list, "jakeersasasasasas")
+  console.log(list, "jakeersasasasasas");
 
-const total = list.reduce((acc,cur)=>{
-  return acc+cur.candyPrice
-},0)
+  const total = list.reduce((acc, cur) => {
+    return acc + cur.candyPrice;
+  }, 0);
 
   const handlePopUp = () => {
     setShowCart(false);

@@ -9,7 +9,6 @@ const Header = () => {
         <h1>Candy Items</h1>
         <HeaderCartButton />
       </header>
-     
     </Fragment>
   );
 };
