@@ -3,7 +3,7 @@ import { contextItem } from "../store/Contextstore";
 import "./FormDisplay.css";
 
 const FormDisplay = () => {
-  const { list, setList } = useContext(contextItem);
+  const { list, addItems } = useContext(contextItem);
 
   return (
     <Fragment>
@@ -18,10 +18,10 @@ const FormDisplay = () => {
                   <p className="price">{item?.candyPrice}</p>
                 </div>
 
-                <button className="button" onClick={() => setList(item)}>
+                <button className="button" onClick={() => addItems(item)}>
                   AddTwoItem
                 </button>
-                <button className="button" onClick={() => setList(item)}>
+                <button className="button" onClick={() => addItems(item)}>
                   AddThreeItem
                 </button>
               </div>

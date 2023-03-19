@@ -1,13 +1,24 @@
 import { useState } from "react";
 import { contextItem } from "./Contextstore";
 
+const initialValue ={
+  id:Math.random(),
+  candyName:'',
+  candyDescription: '',
+  candyPrice: 10
+}
+
 const ContextProvider = (props) => {
   const [showCart, setShowCart] = useState(false);
-  const [formData, setFormData] = useState("");
+  const [formData, setFormData] = useState(initialValue);
   const [list, setList] = useState([]);
   const handleInputChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
+
+  const addItems = (item) => {
+    setList([...list,item])
+  }
 
   const removeItem = (Id) => {
     const filterItems = list.filter((item) => item.id !== Id);
@@ -21,7 +32,7 @@ const ContextProvider = (props) => {
     <contextItem.Provider
       value={{
         list,
-        setList,
+        addItems,
         handleInputChange,
         formData,
         showCart,

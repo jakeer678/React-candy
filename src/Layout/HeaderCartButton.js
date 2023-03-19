@@ -6,14 +6,14 @@ import { contextItem } from "../store/Contextstore";
 import "./HederCartButton.css";
 
 const HeaderCartButton = () => {
-  const { showCart, setShowCart } = useContext(contextItem);
-  const CartCtx = useContext(contextItem);
+  const { showCart, setShowCart ,list} = useContext(contextItem);
+ 
   const handlePopUp = () => {
     setShowCart(true);
   };
 
   let quantity = 0;
-  CartCtx.list.forEach((item) => {
+ list.forEach((item) => {
     quantity = quantity + Number(item.quantity);
    console.log(quantity,"sasasasass")
   });

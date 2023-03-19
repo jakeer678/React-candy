@@ -4,23 +4,22 @@ import "./Form.css";
 import FormDisplay from "./FormDisplay";
 
 const Form = () => {
-  const { list, setList, handleInputChange, formData } =
-    useContext(contextItem);
-    
+  const { addItems, handleInputChange, formData } = useContext(contextItem);
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const qauntity = document.querySelectorAll(
+      "#candyName,#candyDescription,#candyPrice"
+    ).value;
     
-    setList([
-      ...list,
-      {
-        candyName: formData.candyName,
-        candyDescription: formData.candyDescription,
-        candyPrice: formData.candyPrice,
-        qauntity:1
-      },
-   
-    ]);
+    const inputValue = {
+      candyName: formData.candyName,
+      candyDescription: formData.candyDescription,
+      candyPrice: formData.candyPrice,
+      qauntity: 1,
+    };
+
+    addItems(inputValue, qauntity);
   };
 
   return (
@@ -40,7 +39,7 @@ const Form = () => {
           <div>
             <label>Candy Description</label>
             <input
-                id="candyDescription"
+              id="candyDescription"
               type="text"
               name="candyDescription"
               value={formData.candyDescription}
@@ -50,7 +49,7 @@ const Form = () => {
           <div>
             <label>Candy Price</label>
             <input
-             id="candyPrice"
+              id="candyPrice"
               type="number"
               name="candyPrice"
               value={formData.candyPrice}

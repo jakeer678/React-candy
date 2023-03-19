@@ -5,9 +5,13 @@ import CartItem from "./CartItem";
 import "./Cart.css";
 
 const Cart = () => {
-  const { showCart,list, setShowCart,setList,removeItem } = useContext(contextItem);
+  const { showCart,list, setShowCart,addItems,removeItem } = useContext(contextItem);
 
+console.log(list, "jakeersasasasasas")
 
+const total = list.reduce((acc,cur)=>{
+  return acc+cur.candyPrice
+},0)
 
   const handlePopUp = () => {
     setShowCart(false);
@@ -22,7 +26,7 @@ const Cart = () => {
           candyPrice={item?.candyPrice}
           amount={item?.amount}
           removeItem={() => removeItem(item.id)}
-          setList={() => setList(item)}
+          addItems={() => addItems(item)}
         />
       ))}
     </ul>
@@ -34,7 +38,7 @@ const Cart = () => {
         {cartItem}
         <div className="total">
           <span>Total price</span>
-          <span>$</span>
+          <span>${total}</span>
         </div>
         <div className="actions">
           <button className="button_clo" onClick={handlePopUp}>
