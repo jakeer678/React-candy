@@ -2,7 +2,7 @@ import { useState } from "react";
 import { contextItem } from "./Contextstore";
 
 const initialValue = {
-  id: Math.random(),
+  id: Math.random() * 10,
   candyName: "",
   candyDescription: "",
   candyPrice: 10,
@@ -24,9 +24,6 @@ const ContextProvider = (props) => {
     const filterItems = list.filter((item) => item.id !== Id);
     setList(filterItems);
   };
-
-  console.log(formData, "oooooo");
-  console.log(list, "iiiiiii");
 
   return (
     <contextItem.Provider
