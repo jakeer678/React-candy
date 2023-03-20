@@ -6,6 +6,7 @@ const initialValue = {
   candyName: "",
   candyDescription: "",
   candyPrice: 10,
+  qauntity: 1,
 };
 
 const ContextProvider = (props) => {
@@ -14,6 +15,10 @@ const ContextProvider = (props) => {
   const [list, setList] = useState([]);
   const handleInputChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handlePopUp = () => {
+    setShowCart(false);
   };
 
   const addItems = (item) => {
@@ -35,6 +40,7 @@ const ContextProvider = (props) => {
         showCart,
         setShowCart,
         removeItem,
+        handlePopUp,
       }}
     >
       {props.children}

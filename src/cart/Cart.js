@@ -5,18 +5,13 @@ import CartItem from "./CartItem";
 import "./Cart.css";
 
 const Cart = () => {
-  const { showCart, list, setShowCart, addItems, removeItem } =
+  const { showCart, list, handlePopUp, addItems, removeItem } =
     useContext(contextItem);
-
-  console.log(list, "jakeersasasasasas");
 
   const total = list.reduce((acc, cur) => {
     return acc + cur.candyPrice;
   }, 0);
 
-  const handlePopUp = () => {
-    setShowCart(false);
-  };
   const cartItem = (
     <ul className="cart-items">
       {list.map((item) => (

@@ -8,18 +8,14 @@ const Form = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const qauntity = document.querySelectorAll(
-      "#candyName,#candyDescription,#candyPrice"
-    ).value;
-
     const inputValue = {
+      id: Math.random() * 5,
       candyName: formData.candyName,
       candyDescription: formData.candyDescription,
       candyPrice: formData.candyPrice,
-      qauntity: 1,
     };
 
-    addItems(inputValue, qauntity);
+    addItems(inputValue);
   };
 
   return (

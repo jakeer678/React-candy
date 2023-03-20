@@ -12,11 +12,7 @@ const HeaderCartButton = () => {
     setShowCart(true);
   };
 
-  let quantity = 0;
-  list.forEach((item) => {
-    quantity = quantity + Number(item.quantity);
-    console.log(quantity, "sasasasass");
-  });
+  const total = list?.length;
 
   return (
     <Fragment>
@@ -26,7 +22,7 @@ const HeaderCartButton = () => {
           <CartIcon />
         </span>
         <span>Your Cart</span>
-        <span className="badge">{quantity}</span>
+        <span className="badge">{total}</span>
       </button>
     </Fragment>
   );

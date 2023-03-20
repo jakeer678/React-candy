@@ -18,7 +18,7 @@ const FormDisplay = () => {
                   <p className="price">{item?.candyPrice}</p>
                 </div>
 
-                <button className="button" onClick={() =>   addItems(item)}>
+                <button className="button" onClick={() => addItems(item)}>
                   AddTwoItem
                 </button>
                 <button className="button" onClick={() => addItems(item)}>
